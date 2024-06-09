@@ -1,0 +1,632 @@
+:root {
+  --colorprimario: #ededed;
+  --colorsecundario: #009ee3;
+  --colortercero: #008ad6;
+  --colorquinto: #e4f0f8;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.contenedor_nav {
+  height: 60px;
+  background-color: var(--colorsecundario);
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 100%;
+  grid-area: "logo . sitio .";
+  color: #fff;
+  position: sticky;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.contenedor_logo {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colorsecundario);
+}
+
+.contenedor_logo:hover {
+  background-color: var(--colortercero);
+}
+
+.contenedor_logo a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100%;
+  grid-template-areas: "img info";
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_logo a img {
+  grid-area: img;
+  width: 25px;
+  padding-right: 10px;
+}
+
+.contenedor_info_nav {
+  grid-area: info;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_sitio_nav {
+  grid-area: sitio;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+/*-------------------------------------------------------------------*/
+/*Fin del nav*/
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/
+/*Comienzo de la parte main*/
+/*-------------------------------------------------------------------*/
+.contenedor_main {
+  width: 100%;
+  height: calc(100% - 60px);
+  background-color: var(--colorprimario);
+  display: grid;
+  grid-template-columns: 200px 5% 1fr 5% 1fr 10%;
+  grid-template-rows: 50px 170px repeat(2, 1fr) 100px;
+  grid-template-areas:
+    "menu header header header header header"
+    "menu . dinero . actividad ."
+    "menu . . . actividad . "
+    "menu . . . actividad . "
+    "menu footer footer footer footer footer";
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contenedor_ayuda {
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  overflow-y: scroll;
+}
+
+.contenedor_ayuda video {
+  border-radius: 10px;
+}
+
+.contendor_input_ayuda {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contendor_input_ayuda input {
+  height: 70%;
+  width: 90%;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.contendor_input_ayuda button {
+  width: 10%;
+  height: 100%;
+  background-color: var(--colorsecundario);
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.contendor_input_ayuda button:hover {
+  cursor: pointer;
+  background-color: var(--colortercero);
+}
+
+.contenedor_ayuda h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn_ayuda_cvu {
+  text-decoration: none;
+}
+
+.btn_ayuda_cvu img {
+  width: 20px;
+}
+
+.navigation_menu {
+  grid-area: menu;
+    width: 100%;
+    height: 100%;
+    display: fle;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #e0e0e0;
+}
+
+.navigation_menu a {
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navigation_menu a:hover {
+  background-color: #e0e0e0;
+  color: #008ad6;
+}
+
+.navigation_menu a:focus {
+  color: #008ad6;
+}
+
+.contenedor_main footer,
+.contenedor_ayuda,
+.contenedor_ayuda video,
+.Contenedor_general {
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor_main footer {
+  grid-area: footer;
+}
+
+.contenedor_dinero,
+.contenedor_actividad {
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.contenedor_dinero {
+  grid-area: dinero;
+  height: 100%;
+}
+
+.contenedor_dinero_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #111;
+  padding-left: 10px;
+}
+
+.contenedor_dinero_info div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.contenedor_dinero_info div p {
+  margin: 0;
+}
+
+.contenedor_dinero_info div span:hover {
+  background-color: var(--colorquinto);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.contenedor_dinero_info div b,
+span {
+  font-size: 20px;
+}
+
+.btn_cvu {
+  background-color: var(--colorquinto);
+  color: var(--colortercero);
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 12px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.btn_cvu:hover {
+  background-color: #d0e6f5;
+  transition: all 0.4s ease;
+}
+
+.btn_dinero a {
+  color: var(--colortercero);
+  border-radius: 5px;
+  height: 50px;
+  width: 45%;
+  background-color: var(--colorquinto);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_dinero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+}
+
+.btn_dinero a:hover {
+  background-color: #d0e6f5;
+  transition: all 0.4s ease;
+}
+
+.contenedor_actividad {
+  grid-area: actividad;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.contenedor_actividad h1 {
+  border-bottom: 1px solid var(--colorprimario);
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.contenedor_actividad .tabla_actividades {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabla_actividades a {
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tabla_actividades a:hover {
+  background-color: #f1f1f1;
+  transition: all 0.5s ease;
+}
+
+.tabla_actividades a tr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.img,
+.estado,
+.monto {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  width: auto;
+}
+
+.estado {
+  width: 60%;
+}
+
+.monto {
+  width: 30%;
+}
+
+.tabla_actividades img {
+  width: 110px;
+}
+
+.contenedor_main footer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colorprimario);
+  z-index: 900;
+}
+
+.contenedor_main footer div {
+  border-top: 1px solid #838282;
+  width: 80%;
+  height: 90%;
+  font-size: 12px;
+  font-weight: 400;
+  color: #383838;
+  text-align: center;
+}
+
+.contendido_cvu {
+  grid-area: actividad;
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor_datos {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  position: relative;
+  color: #5f5f5f;
+}
+
+.contenedor_datos img {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.contenedor_botones {
+  margin-top: 20px;
+  float: right;
+}
+
+.btn {
+  height: 50px;
+  background-color: var(--colorquinto);
+  color: var(--colortercero);
+  border-radius: 5px;
+  margin-left: 10px;
+  border: 1px solid #d0e6f5;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.copiar {
+  background-color: var(--colorsecundario);
+  color: #fff;
+}
+
+.extend {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+
+.wrapper {
+  grid-area: actividad;
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor_juego {
+  grid-row-start: 2;
+  grid-row-end: 5;
+  border-radius: 10px;
+  grid-column-start: 3;
+  height: 100%;
+  background-color: #fff;
+}
+
+.contenido_juego {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1% 1fr;
+  grid-template-areas:
+    "ruleta"
+    "."
+    "apuestas";
+}
+
+.ruleta,
+.contenedor_btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ruleta {
+  grid-area: ruleta;
+}
+.apuestas {
+  grid-area: apuestas;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 5% 1fr;
+  grid-template-areas:
+    "info"
+    "."
+    "btn_apuestas";
+    user-select: none;
+}
+.contenedor_info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor_info #enviar_apuestas
+{
+  padding: 15px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--colorsecundario);
+  color: var(--colorprimario);
+  transition: all .4s ease;
+}
+.contenedor_info #enviar_apuestas:hover
+{
+  cursor: pointer;
+}
+
+.input_apuestas
+{
+  padding: 10px;
+  width: 150px;
+}
+.contenedor_btn {
+  grid-area:btn_apuestas;
+  width: 100%;
+  gap: 10px;
+}
+
+.boton-ruleta {
+  background-color: #e4f0f8;
+  width: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #009ee3;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  padding: 10px;
+}
+
+.boton-ruleta:hover {
+  background-color: #d0e6f5;
+  cursor: pointer;
+}
+
+.contenedor_juego h3 {
+  font-size: 17px;
+  font-weight: 400;
+  margin-left: 30px;
+}
+
+.ruleta_girar {
+  background-color: red;
+  width: 50%;
+  height: 95%;
+  border-radius: 50%;
+}
+
+.btn_menu {
+  height: auto;
+  width: auto;
+}
+
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor-ruleta {
+  grid-area: ruleta;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-ruleta #ruleta_img
+{
+  width: 300px;
+  transition: all .5s ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate( 0deg );
+  }
+  100% {
+    transform: rotate( 360deg );
+  }
+};
+
+.contenedor-ruleta .marcador {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -25px;
+  width: 0;
+  height: 0;
+  border: 25px solid #fff;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  z-index: 500;
+}
+
+#button-start {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80px;
+  height: 80px;
+  font-weight: bold;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 600;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.pie {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  clip: rect(0px, 150px, 300px, 0px);
+}
+
+.hold {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  clip: rect(0px, 300px, 300px, 150px);
+}

@@ -1,0 +1,250 @@
+:root {
+  --colorprimario: #ededed;
+  --colorsecundario: #009ee3;
+  --colortercero: #008ad6;
+  --colorcuarto: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colorprimario);
+  width: 100vw;
+  height: 100vh;
+}
+
+.everything {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 5% 35% 55% 5%;
+  grid-template-rows: 10% auto 10%;
+  grid-template-areas:
+    "header header header header"
+    ". login img ."
+    ". footer footer .";
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.photo {
+  grid-area: img;
+  float: right;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  right: 50px;
+  position: relative;
+  border-radius: 10px;
+  z-index: -3;
+}
+
+.everything header,
+.everything footer,
+.wrapper,
+.photo {
+  width: 100%;
+  height: 100%;
+}
+
+.everything header,
+.everything header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.everything header {
+  grid-area: header;
+}
+
+
+.everything header div {
+  color: #fff;
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: #f7363d;
+}
+
+.everything footer {
+  width: 98%;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: wrap;
+}
+
+.wrapper {
+  text-decoration: none;
+  grid-area: login;
+  background: #fff;
+  color: black;
+  border-radius: 10px;
+  padding: 30px 40px;
+  float: left;
+  z-index: 5;
+}
+
+.wrapper form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 24px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.075);
+  border-radius: 40px;
+  font-size: 14px;
+  color: #000000;
+  background-color: var(--colorcuarto);
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #6e6e6e;
+}
+
+.input-box .ojos {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  height: 20px;
+  width: 20px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  margin: -15px 0px 15px;
+  width: 100%;
+}
+
+.remember-forgot label input {
+  accent-color: #6e6e6e;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #009ee3;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #6e6e6e;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .btn:hover {
+  background-color: #f3f3f3;
+  color: #5f5f5f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .register-link {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link p a {
+  color: #009ee3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 11px;
+  font-weight: 380;
+
+}
+
+@media screen and (max-width: 1619px) {
+  .everything {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 10% auto 10% 10%;
+    grid-template-areas:
+      "header header header"
+      ". login ."
+      ". . ."
+      ". footer .";
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .everything {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 10% auto 10% 10%;
+    grid-template-areas:
+      "header header header"
+      ". login ."
+      ". . ."
+      ". footer .";
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    display: none;
+  }
+}

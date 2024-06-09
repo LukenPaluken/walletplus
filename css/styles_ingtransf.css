@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --colorprimario: #ededed;
+  --colorsecundario: #009ee3;
+  --colortercero: #008ad6;
+  --colorquinto: #e4f0f8;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: black;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper h1 {
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 420;
+  color: #5f5f5f;
+  margin-bottom: 5px;
+}
+
+.ingresar {
+  float: left;
+}
+
+h2 span {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.dinerodisponible {
+  font-weight: 500;
+  font-size: 13px;
+  text-align: right;
+  float: right;
+}
+
+.wrapper p,
+.wrapper form p {
+  font-size: 11px;
+  font-weight: 500;
+  color: #5f5f5f;
+  margin-top: 9px;
+}
+
+.wrapper form p {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.wrapper .input-box {
+  width: 100%;
+  height: 50px;
+  margin: 43px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: #dfdfdf;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 14px;
+  color: #000;
+  padding: 20px;
+}
+
+.input-box input::placeholder {
+  color: #6e6e6e;
+}
+
+.wrapper .btn {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 45px;
+  background: var(--colorquinto);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--colorsecundario);
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.4s ease;
+}
+
+.wrapper .btn:hover {
+  background-color: #d0e6f5;
+}
+
+.wrapper .btn:active {
+  background-color: #007cb1;
+  color: #fff;
+}
+
+.wrapper a {
+  color: #009ee3;
+  text-decoration: none;
+}
+
+.wrapper p a:hover {
+  text-decoration: underline;
+}
+
+#fa-solid {
+  height: 70px;
+  width: 70px;
+}
+
+.opciones-pago {
+  margin-top: 43px;
+  width: 100%;
+}
+
+.opcion-pago {
+  background-color: var(--colorquinto);
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.opcion-pago h2 {
+  color: var(--colorsecundario);
+  margin-left: 20px;
+  position: relative;
+  top: 2.3px;
+}
+
+.opcion-pago .galicia {
+  right: 17.5px;
+}
+
+.opcion-pago .ph1 {
+  height: 80%;
+  position: relative;
+  right: 20px;
+}
+
+.opcion-pago .ph2 {
+  height: 65%;
+  position: relative;
+  right: 37px;
+}
+
+.opcion-pago .ph3 {
+  height: 80%;
+  position: relative;
+  right: 20px;
+}
+
+.opcion-pago:hover {
+  background-color: #d0e6f5;
+}
+
+.opcion-pago:active {
+  background-color: #007cb1;
+}
